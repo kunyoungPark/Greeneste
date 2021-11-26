@@ -5,19 +5,19 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/greeneste"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/greeneste"
         android:supportsRtl="true"
         android:theme="@style/Theme.Greeneste" >
 
-        <activity android:name=".LogIn">
+        <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".Mileage_QRScan">
+        <activity android:name=".HomePage">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
             </intent-filter>

@@ -1,80 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/green4">
-
-    <Button
-        android:id="@+id/home_guide_btn"
-        android:layout_width="210dp"
-        android:layout_height="250dp"
-        android:layout_weight="1"
-        android:backgroundTint="@color/teal_700"
-        android:text="Recycling Guide"
-        tools:layout_editor_absoluteX="210dp"
-        tools:layout_editor_absoluteY="407dp"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/home_mileage_btn"
-        android:layout_width="210dp"
-        android:layout_height="249dp"
-        android:layout_weight="1"
-        android:backgroundTint="@color/green6"
-        android:text="Mileage &amp; QR Scan"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="407dp" />
-
-    <LinearLayout
-        android:layout_width="420dp"
-        android:layout_height="250dp"
-        android:orientation="horizontal"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="174dp">
-
-        <Button
-            android:id="@+id/home_tracking_btn"
-            android:layout_width="100dp"
-            android:layout_height="240dp"
-            android:layout_weight="1"
-            android:backgroundTint="@color/teal_700"
-            android:text="Tracker and Map" />
-
-        <Button
-            android:id="@+id/home_report_btn"
-            android:layout_width="100dp"
-            android:layout_height="240dp"
-            android:layout_weight="1"
-            android:backgroundTint="@color/green6"
-            android:text="Report" />
-
-
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="94dp"
-        android:layout_height="94dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="16dp"
-        tools:srcCompat="@tools:sample/avatars" />
+    android:layout_gravity="center"
+    android:gravity="center_horizontal"
+    android:background="@color/green4"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello"
+        android:layout_marginTop="40dp"
+        android:text="Hello ChloeCho!"
+        android:textStyle="bold"
+        android:textSize="25dp"/>
 
+
+    <ImageView
+        android:layout_width="94dp"
+        android:layout_height="94dp"
+        android:layout_margin="13dp"
+        app:srcCompat="@drawable/screen_shot_2021_11_26_at_5_00_05_pm"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="128dp" />
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageView15"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:background="#ffffffff"
+            app:srcCompat="@drawable/_1_trashcan_location__" />
+
+        <ImageButton
+            android:id="@+id/imageView16"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:layout_margin="5dp"
+            android:background="#ffffffff"
+            app:srcCompat="@drawable/_2_qr_code__" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageView17"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:layout_margin="5dp"
+            android:background="#ffffffff"
+            app:srcCompat="@drawable/_3_report" />
+
+        <ImageButton
+            android:id="@+id/imageView19"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:background="#ffffffff"
+            app:srcCompat="@drawable/_4_recycling_guide" />
+
+    </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
 
 
 

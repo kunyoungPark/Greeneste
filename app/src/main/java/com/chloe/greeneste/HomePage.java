@@ -3,6 +3,7 @@ package com.chloe.greeneste;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,31 +17,9 @@ public class HomePage extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_page);
-        Button report = findViewById(R.id.home_report_btn);
-        Button tracker = findViewById(R.id.home_tracking_btn);
-        Button mileage = findViewById(R.id.home_mileage_btn);
-        Button guide = findViewById(R.id.home_guide_btn);
-        report.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                tracker.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        mileage.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                guide.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View v) {
-
-                                    }
-                                });
-                            }
-                        });
-                    }
-                });
-            }
-        });
+        ImageButton trash_can_location = findViewById(R.id.imageView15);
+        ImageButton qr_code = findViewById(R.id.imageView16);
+        ImageButton report = findViewById(R.id.imageView17);
+        ImageButton recycling_guide = findViewById(R.id.imageView19);
     }
 }
