@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "743922836830",
+    "project_id": "greeneste-c1fa1",
+    "storage_bucket": "greeneste-c1fa1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743922836830:android:03ed90c279d3cdda381bcf",
+        "android_client_info": {
+          "package_name": "com.chloe.greeneste"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "743922836830-73bhhgdr41o8qjeb0u8hm231g0333afm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8lYjdeyDzMYFkffuU5Deq4mYQTDaGlWA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "743922836830-73bhhgdr41o8qjeb0u8hm231g0333afm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

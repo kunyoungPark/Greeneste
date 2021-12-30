@@ -9,8 +9,10 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class LogIn extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
 
+public class LogIn extends AppCompatActivity {
+    private FirebaseAuth mAuth;
     @Override
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
