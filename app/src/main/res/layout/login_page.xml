@@ -7,49 +7,75 @@
     android:background="@color/green4"
     tools:context=".LogIn">
 
-    <Button
-        android:id="@+id/login_button_sign_in"
-        android:layout_width="350dp"
-        android:layout_height="57dp"
-        android:layout_margin="15dp"
-        android:backgroundTint="@color/green3"
-        android:gravity="center"
-        android:text="Sign in"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="450dp"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/login_button_facebook"
-        android:layout_width="350dp"
-        android:layout_height="57dp"
-        android:backgroundTint="@color/purple_700"
-        android:gravity="center"
-        android:text="facebook"
-        android:layout_margin="15dp"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="534dp"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/login_button_email"
-        android:layout_width="350dp"
-        android:layout_height="57dp"
-        android:backgroundTint="@color/teal_200"
-        android:gravity="center"
-        android:text="Email/Gmail"
-        android:layout_margin="15dp"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="614dp"
-        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/login_imageview_logo"
-        android:layout_width="290dp"
-        android:layout_height="346dp"
+        android:layout_width="195dp"
+        android:layout_height="252dp"
         app:srcCompat="@drawable/greeneste"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="69dp" />
+        tools:layout_editor_absoluteX="108dp"
+        tools:layout_editor_absoluteY="-10dp" />
+
+    <ImageButton
+        android:id="@+id/signin_google"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:srcCompat="@drawable/sign_in_page__1"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="229dp" />
+
+    <ImageButton
+        android:id="@+id/signin_fb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/darkblue"
+        app:srcCompat="@drawable/sign_in_page__1__1_"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="288dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="97dp"
+        android:layout_height="96dp"
+        app:srcCompat="@drawable/or1"
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="347dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/forgotuser"
+        android:layout_width="131dp"
+        android:layout_height="61dp"
+        android:scaleType="fitXY"
+        android:background="@color/green4"
+        app:srcCompat="@drawable/forgot_username"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="622dp" />
+
+    <ImageButton
+        android:id="@+id/forgotpass"
+        android:layout_width="131dp"
+        android:layout_height="61dp"
+        android:scaleType="fitXY"
+        android:background="@color/green4"
+        app:srcCompat="@drawable/forgot_username__1_"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="211dp"
+        tools:layout_editor_absoluteY="622dp" />
+
+    <ImageButton
+        android:id="@+id/signin_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/green4"
+        app:srcCompat="@drawable/sign_in_page__1__2_"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="558dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

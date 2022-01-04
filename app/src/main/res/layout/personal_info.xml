@@ -15,7 +15,7 @@
         tools:layout_editor_absoluteY="642dp"
         tools:ignore="MissingConstraints" />
 
-    <EditText
+    <TextView
         android:id="@+id/info_birthday_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
         tools:layout_editor_absoluteX="86dp"
         tools:layout_editor_absoluteY="130dp" />
 
-    <EditText
+    <TextView
         android:id="@+id/info_school_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
         tools:layout_editor_absoluteY="233dp"
         tools:ignore="MissingConstraints" />
 
-    <EditText
+    <TextView
         android:id="@+id/info_grade_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
         tools:layout_editor_absoluteY="339dp"
         tools:ignore="MissingConstraints" />
 
-    <EditText
+    <TextView
         android:id="@+id/info_address_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
         tools:layout_editor_absoluteY="449dp"
         tools:ignore="MissingConstraints" />
 
-    <EditText
+    <TextView
         android:id="@+id/info_city_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -85,7 +85,7 @@
         tools:layout_editor_absoluteY="555dp"
         tools:ignore="MissingConstraints" />
 
-    <EditText
+    <TextView
         android:id="@+id/info_name_input"
         android:layout_width="74dp"
         android:layout_height="36dp"

@@ -29,15 +29,15 @@ public class Signup extends AppCompatActivity {
         TextInputEditText birth_input= findViewById(R.id.birth_input);
         TextInputEditText email_input= findViewById(R.id.email_input);
         TextInputEditText phone_number_input= findViewById(R.id.phone_number_input);
+        TextInputEditText password_input= findViewById(R.id.password_input);
         ImageButton complete = findViewById(R.id.complete);
 
-        String email;
-        String password;
+        String email = String.valueOf(email_input.getText() );
+        String password = String.valueOf(password_input.getText());
 
         complete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                email = email_input.getText().toString();
             }
         });
 

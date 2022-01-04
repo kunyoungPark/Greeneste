@@ -1,4 +1,6 @@
 package com.chloe.greeneste;
 
-public class Trashcan_Pathfinding {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Trashcan_Pathfinding extends AppCompatActivity {
 }

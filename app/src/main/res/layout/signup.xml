@@ -121,6 +121,25 @@
                 android:hint="hint" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:gravity="center">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/green8"
+                android:hint="hint" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -157,6 +176,9 @@
             android:background="@color/green4"
             app:srcCompat="@drawable/name__5_" />
     </LinearLayout>
+
+
+
 </LinearLayout>
 
 

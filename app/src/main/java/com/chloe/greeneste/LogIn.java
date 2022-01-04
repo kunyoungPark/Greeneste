@@ -3,6 +3,7 @@ package com.chloe.greeneste;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,36 +14,18 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LogIn extends AppCompatActivity {
     private FirebaseAuth mAuth;
+
     @Override
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_page);
-        Button sign_in = findViewById(R.id.login_button_sign_in);
-        Button facebook = findViewById(R.id.login_button_facebook);
-        Button email_gmail = findViewById(R.id.login_button_email);
-        ImageView logo = findViewById(R.id.login_imageview_logo);
+        ImageButton google = findViewById(R.id.signin_google);
+        ImageButton facebook = findViewById(R.id.signin_fb);
+        ImageButton signin = findViewById(R.id.signin_btn);
+        ImageButton forgotuser = findViewById(R.id.forgotuser);
+        ImageButton forgotpass = findViewById(R.id.forgotpass);
 
-        sign_in.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        facebook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        email_gmail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
     }
 }
 
