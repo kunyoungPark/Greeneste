@@ -1,31 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/green4">
+    android:background="@color/green4"
+    android:orientation="vertical">
 
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Your Mileage is:"
-        android:textSize="30dp"
+    <ImageView
+        android:id="@+id/mileage_imageView_pfp"
+        android:layout_width="75dp"
+        android:layout_height="66dp"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="522dp" />
+        tools:layout_editor_absoluteX="168dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:srcCompat="@tools:sample/avatars" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="left for a prize!"
-        android:textSize="40dp"
-        tools:layout_editor_absoluteX="126dp"
-        tools:layout_editor_absoluteY="575dp"
-        tools:ignore="MissingConstraints" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Mileage is:"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/mileage_textview_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="___"
+            android:textSize="30dp" />
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/textView10"
@@ -33,65 +43,17 @@
         android:layout_height="wrap_content"
         android:text="Enter QR scan"
         android:textSize="30dp"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="98dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="98dp" />
 
     <ImageView
-        android:id="@+id/mileage_imageView_pfp"
-        android:layout_width="75dp"
-        android:layout_height="66dp"
-        tools:layout_editor_absoluteX="168dp"
-        tools:layout_editor_absoluteY="16dp"
-        tools:srcCompat="@tools:sample/avatars"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Scans"
-        android:textSize="30dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="302dp"
-        tools:layout_editor_absoluteY="522dp" />
-
-    <TextView
-        android:id="@+id/mileage_textview_scan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="___"
-        android:textSize="30dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="259dp"
-        tools:layout_editor_absoluteY="522dp" />
-
-    <TextView
-        android:id="@+id/mileage_textview_prize"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="___"
-        android:textSize="40dp"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="575dp"
-        tools:ignore="MissingConstraints" />
-
-    <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="361dp"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="139dp"
-        tools:ignore="MissingConstraints">
-
-
-        <ImageView
             android:id="@+id/imageView2"
-            android:background="@color/green6"
             android:layout_width="wrap_content"
-            android:padding="20dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weiht="1"
+            android:background="@color/green6"
+            android:padding="20dp"
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

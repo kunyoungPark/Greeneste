@@ -1,46 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/green4">
+    android:background="@color/green4"
+    android:orientation="vertical">
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="83dp"
         android:layout_height="82dp"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="27dp"
-        tools:srcCompat="@tools:sample/avatars"
-        tools:ignore="MissingConstraints" />
+        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="140dp"
-        tools:layout_editor_absoluteY="32dp"
-        tools:ignore="MissingConstraints" />
+        android:text="TextView" />
 
     <TextView
 
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="139dp"
-        tools:layout_editor_absoluteY="75dp"
-        tools:ignore="MissingConstraints" />
+        android:text="TextView" />
 
     <LinearLayout
         android:layout_width="411dp"
         android:layout_height="52dp"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="134dp"
-        tools:ignore="MissingConstraints">
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/button10"
@@ -67,10 +56,7 @@
     <LinearLayout
         android:layout_width="413dp"
         android:layout_height="541dp"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="174dp"
-        tools:ignore="MissingConstraints">
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/button13"
@@ -86,4 +72,4 @@
             android:layout_weight="1"
             android:text="Recommendation" />
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
