@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "743922836830",
+    "firebase_url": "https://greeneste-c1fa1-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "greeneste-c1fa1",
     "storage_bucket": "greeneste-c1fa1.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "743922836830-uc51v2n2randk7c44lhq3mkutm5334kb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chloe.greeneste",
+            "certificate_hash": "eb7d9857aedc2f35e7dabec213b11a8ebdd7fb6c"
+          }
+        },
         {
           "client_id": "743922836830-73bhhgdr41o8qjeb0u8hm231g0333afm.apps.googleusercontent.com",
           "client_type": 3
