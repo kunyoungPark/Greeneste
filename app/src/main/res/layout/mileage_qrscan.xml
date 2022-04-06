@@ -51,7 +51,7 @@
             android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weiht="1"
+            android:layout_weight="1"
             android:background="@color/green6"
             android:padding="20dp"
             tools:srcCompat="@tools:sample/backgrounds/scenic" />

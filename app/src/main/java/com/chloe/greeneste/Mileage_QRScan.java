@@ -18,7 +18,6 @@ public class Mileage_QRScan extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mileage_qrscan);
         TextView num_mileage = findViewById(R.id.mileage_textview_scan);
-        TextView num_scan = findViewById(R.id.mileage_textview_prize);
         ImageView pfp = findViewById(R.id.mileage_imageView_pfp);
 
 
