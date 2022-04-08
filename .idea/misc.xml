@@ -3,20 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/after_report_page.xml" value="0.15070921985815602" />
-        <entry key="app/src/main/res/layout/afterreport_page.xml" value="0.32135416666666666" />
         <entry key="app/src/main/res/layout/home_page.xml" value="0.1" />
         <entry key="app/src/main/res/layout/login_page.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/mileage_qrscan.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/personal_info.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/recycling_guide.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/report_page.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/mileage_qrscan.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/personal_info.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/recycling_guide.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/report_page.xml" value="0.21648855601568434" />
         <entry key="app/src/main/res/layout/shopping_page.xml" value="0.15070921985815602" />
         <entry key="app/src/main/res/layout/signup.xml" value="0.2204104172493037" />
         <entry key="app/src/main/res/layout/splash.xml" value="0.15070921985815602" />
         <entry key="app/src/main/res/layout/test.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/trashcan_pathfinding.xml" value="0.1734827085810608" />
-        <entry key="app/src/main/res/layout/user_page.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/user_page.xml" value="0.15070921985815602" />
       </map>
     </option>
   </component>
