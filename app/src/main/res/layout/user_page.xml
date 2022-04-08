@@ -22,21 +22,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome!"
-        android:textSize="30dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="139dp"
-        tools:layout_editor_absoluteY="85dp" />
+        android:textSize="30dp" />
 
-    <Button
-        android:id="@+id/user_qrcode_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:backgroundTint="@color/green5"
-        android:text="Create QR Code"
-        android:textSize="35dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="399dp" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:id="@+id/create_new_qrcode"
+        android:src="@drawable/forgot_username__3_"
+        android:textSize="35dp" />
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img_1069">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:src="@drawable/greeneste"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/create_new_qrcode" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/img_1069" />
 </LinearLayout>

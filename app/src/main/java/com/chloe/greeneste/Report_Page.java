@@ -1,5 +1,6 @@
 package com.chloe.greeneste;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,12 +25,15 @@ public class Report_Page extends AppCompatActivity {
         trash_can.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                too_much_trash.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                    }
-                });
+                Intent it = new Intent(Report_Page.this, AfterReport_Page.class);
+                startActivity(it);
+            }
+        });
+        too_much_trash.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(Report_Page.this, AfterReport_Page.class);
+                startActivity(it);
             }
         });
     }

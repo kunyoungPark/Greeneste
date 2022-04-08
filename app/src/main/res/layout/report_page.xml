@@ -19,6 +19,12 @@
             android:layout_width="96dp"
             android:layout_height="92dp"
             tools:srcCompat="@tools:sample/avatars" />
+        <TextView
+            android:id="@+id/question_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="What do you need help on?"/>
 
         <LinearLayout
             android:layout_width="409dp"
@@ -41,12 +47,5 @@
                 android:backgroundTint="@color/teal_700"
                 android:text="Too much trash" />
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/question_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="What do you need help on?"/>
     </LinearLayout>
 </LinearLayout>

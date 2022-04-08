@@ -6,12 +6,16 @@
     android:background="@color/green4"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/info_done_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/black"
-        android:text="Done" />
+    <TextView
+        android:id="@+id/info_name_input"
+        android:layout_width="74dp"
+        android:layout_height="36dp"
+        android:background="@color/green6"
+        android:ems="3"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textColor="@color/white"
+        android:textSize="25dp"/>
 
     <TextView
         android:id="@+id/info_birthday_input"
@@ -68,15 +72,12 @@
         android:textColor="@color/white"
         android:textSize="40dp" />
 
-    <TextView
-        android:id="@+id/info_name_input"
-        android:layout_width="74dp"
-        android:layout_height="36dp"
-        android:background="@color/green6"
-        android:ems="3"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:textColor="@color/white"
-        android:textSize="25dp"/>
+    <Button
+        android:id="@+id/info_done_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="Done" />
+
 
 </LinearLayout>
