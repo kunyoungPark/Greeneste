@@ -54,6 +54,6 @@
             android:layout_weight="1"
             android:background="@color/green6"
             android:padding="20dp"
-            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+            tools:srcCompat="@drawable/qr"/>
 
 </LinearLayout>

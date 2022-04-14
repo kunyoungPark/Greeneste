@@ -24,9 +24,11 @@
         android:text="Welcome!"
         android:textSize="30dp" />
 
-    <ImageView
+    <ImageButton
         android:layout_width="match_parent"
         android:layout_height="145dp"
+        android:scaleType="fitXY"
+        android:background="#00FFFFFF"
         android:id="@+id/create_new_qrcode"
         android:src="@drawable/forgot_username__3_"
         android:textSize="35dp" />

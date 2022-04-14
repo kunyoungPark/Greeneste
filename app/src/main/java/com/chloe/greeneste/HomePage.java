@@ -33,7 +33,7 @@ public class HomePage extends AppCompatActivity {
        qr_code.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               Intent it = new Intent(HomePage.this, Mileage_QRScan.class);
+               Intent it = new Intent(HomePage.this, Userpage.class);
                startActivity(it);
            }
         });
