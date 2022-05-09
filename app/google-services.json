@@ -1,42 +1,34 @@
 {
   "project_info": {
-    "project_number": "743922836830",
-    "firebase_url": "https://greeneste-c1fa1-default-rtdb.asia-southeast1.firebasedatabase.app",
-    "project_id": "greeneste-c1fa1",
-    "storage_bucket": "greeneste-c1fa1.appspot.com"
+    "project_number": "707336844515",
+    "firebase_url": "https://greeneste-92f66-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "greeneste-92f66",
+    "storage_bucket": "greeneste-92f66.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:743922836830:android:03ed90c279d3cdda381bcf",
+        "mobilesdk_app_id": "1:707336844515:android:91d0ba2fa3e49080df81d6",
         "android_client_info": {
           "package_name": "com.chloe.greeneste"
         }
       },
       "oauth_client": [
         {
-          "client_id": "743922836830-uc51v2n2randk7c44lhq3mkutm5334kb.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.chloe.greeneste",
-            "certificate_hash": "eb7d9857aedc2f35e7dabec213b11a8ebdd7fb6c"
-          }
-        },
-        {
-          "client_id": "743922836830-73bhhgdr41o8qjeb0u8hm231g0333afm.apps.googleusercontent.com",
+          "client_id": "707336844515-iiribgcutibknmv6hk2bi8uqlgevv03l.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC8lYjdeyDzMYFkffuU5Deq4mYQTDaGlWA"
+          "current_key": "AIzaSyALxKKnulrxkK_ts8NoBDjMQIeWF4upCiI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "743922836830-73bhhgdr41o8qjeb0u8hm231g0333afm.apps.googleusercontent.com",
+              "client_id": "707336844515-iiribgcutibknmv6hk2bi8uqlgevv03l.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

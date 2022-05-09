@@ -2,7 +2,7 @@ package com.chloe.greeneste;
 
 import java.util.ArrayList;
 
-public class User {
+public class MyUser {
 
     public String username ;
     public String useremail;
@@ -11,8 +11,8 @@ public class User {
     public String birthday;
     public int pointtotal;
 
-    User(){}
-    public User(String useremail,String username, String userpw, String uid, String birthday, int pointtotal){
+    public MyUser(){}
+     public MyUser(String useremail, String username, String userpw, String uid, String birthday, int pointtotal){
         this.useremail = useremail;
         this.userpw = userpw;
         this.username= username;
