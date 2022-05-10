@@ -2,18 +2,33 @@ package com.chloe.greeneste;
 
 import static android.content.ContentValues.TAG;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
+import java.io.InputStream;
+import java.net.URL;
 
 public class DBTest extends AppCompatActivity {
 
@@ -23,23 +38,42 @@ public class DBTest extends AppCompatActivity {
         setContentView(R.layout.dbtest);
         TextView tv1 = findViewById(R.id.dbtv1);
         TextView tv2 = findViewById(R.id.dbtv2);
+        TextView tv4 = findViewById(R.id.dbtv4);
+        ImageView iv = findViewById(R.id.dbiv);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://greeneste-92f66-default-rtdb.asia-southeast1.firebasedatabase.app" );
         DatabaseReference myRef = database.getReference();
         TextView tv3 = findViewById(R.id.dbtv3);
-        tv3.setText(myRef.toString());
+        tv1.setText(myRef.toString());
 
-        MyUser user = new MyUser("2", "nnn", "123123", "123123123", "930909", 2);
-        myRef.child("message").setValue(user);
-        tv1.setText("done");
-        myRef.child("message").addValueEventListener(new ValueEventListener() {
+        myRef.child("guideline").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-                MyUser value = dataSnapshot.getValue(MyUser.class);
-                Log.d(TAG, "Value is: " + value.uid);
-                tv2.setText("Value is: " + value.pointtotal);
+               for (DataSnapshot guide: dataSnapshot.getChildren()){
+                   GuideDTO getDto = guide.getValue(GuideDTO.class);
+                   tv2.setText(getDto.getTitle());
+                   tv3.setText(getDto.getContent());
+                   tv4.setText(getDto.getImg());
+                   FirebaseStorage storage = FirebaseStorage.getInstance("gs://greeneste-92f66.appspot.com");
+                   StorageReference storageRef = storage.getReference();
+                   storageRef.child("guideline/"+guide.getKey() +"/img.png").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                       @Override
+                       public void onSuccess(Uri uri) {
+                           //이미지 로드 성공시
+                           Glide.with(getApplicationContext())
+                                   .load(uri)
+                                   .into(iv);
+                       }
+                   }).addOnFailureListener(new OnFailureListener() {
+                       @Override
+                       public void onFailure(@NonNull Exception exception) {
+                           //이미지 로드 실패시
+                           Toast.makeText(getApplicationContext(), storageRef.child("guideline/"+guide.getKey() +"/img.png").toString(), Toast.LENGTH_SHORT).show();
+                       }
+                   });
+               }
             }
 
             @Override
@@ -49,4 +83,6 @@ public class DBTest extends AppCompatActivity {
             }
         });
     }
+
+
 }

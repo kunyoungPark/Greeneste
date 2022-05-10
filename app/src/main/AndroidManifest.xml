@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.chloe.greeneste">
+    xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
@@ -12,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Greeneste" >
 
-        <activity android:name=".DBTest"
+        <activity android:name=".Recycling_Guide"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -43,7 +42,7 @@
                 <action android:name="android.intent.action.VIEW"/>
             </intent-filter>
         </activity>
-        <activity android:name=".Recycling_Guide"
+        <activity android:name=".DBTest"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
