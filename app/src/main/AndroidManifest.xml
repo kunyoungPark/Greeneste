@@ -43,18 +43,14 @@
                 <action android:name="android.intent.action.VIEW"/>
             </intent-filter>
         </activity>
+
         <activity android:name=".Personal_info"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
             </intent-filter>
         </activity>
-        <activity android:name=".Recycling_Guide"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-            </intent-filter>
-        </activity>
+
         <activity android:name=".Report_Page"
             android:exported="true">
             <intent-filter>

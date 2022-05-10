@@ -3,13 +3,17 @@ package com.chloe.greeneste;
 import static android.content.ContentValues.TAG;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,19 +39,33 @@ import java.util.ArrayList;
 public class Recycling_Guide extends AppCompatActivity implements GuidelineAdapter.OnItemClickListener   {
 
     private Context mContext;
-
-
-
     private RecyclerView rcGuide;
-
     private GuidelineAdapter guidelineAdapter;
+    ProgressDialog progressDialog ;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recycling_guide);
+        SearchView sv = findViewById(R.id.sv);
+
         mContext = this;
+        progressDialog = new ProgressDialog(Recycling_Guide.this);
+        progressDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        progressDialog.setCancelable(true);
+        progressDialog.show();
         init();
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                progressDialog.dismiss();
+            }
+        }, 3000); //딜레이 타임 조절
+
+
     }
 
     private void init() {
