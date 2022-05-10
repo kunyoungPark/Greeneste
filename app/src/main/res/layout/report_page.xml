@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/report_page_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/green4"
@@ -28,7 +29,7 @@
 
         <LinearLayout
             android:layout_width="409dp"
-            android:layout_height="599dp"
+            android:layout_height="210dp"
             android:orientation="horizontal">
 
             <Button
@@ -47,5 +48,14 @@
                 android:backgroundTint="@color/teal_700"
                 android:text="Too much trash" />
         </LinearLayout>
+
+        <fragment
+            android:id="@+id/mapFrag"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".Report_Page" />
+
+
     </LinearLayout>
 </LinearLayout>
