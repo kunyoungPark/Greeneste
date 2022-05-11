@@ -1,15 +1,19 @@
 package com.chloe.greeneste;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Looper;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -41,9 +45,14 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.libraries.places.api.net.PlacesClient;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.installations.Utils;
 
 import org.w3c.dom.Text;
 
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
@@ -83,6 +92,7 @@ public class Report_Page extends AppCompatActivity
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.report_page);
+
         Button trash_can = findViewById(R.id.no_trash_can_btn);
         Button too_much_trash = findViewById(R.id.too_much_trash_btn);
         TextView question = findViewById(R.id.question_textview);
@@ -92,6 +102,9 @@ public class Report_Page extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 Intent it = new Intent(Report_Page.this, AfterReport_Page.class);
+                it.putExtra("location", "위도:" + String.valueOf(mCurrentLocation.getLatitude())
+                        + " 경도:" + String.valueOf(mCurrentLocation.getLongitude()));
+                it.putExtra("address", getCurrentAddress(currentPosition));
                 startActivity(it);
             }
         });
@@ -99,6 +112,9 @@ public class Report_Page extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 Intent it = new Intent(Report_Page.this, AfterReport_Page.class);
+                it.putExtra("location", "위도:" + String.valueOf(mCurrentLocation.getLatitude())
+                        + " 경도:" + String.valueOf(mCurrentLocation.getLongitude()));
+                it.putExtra("address", getCurrentAddress(currentPosition));
                 startActivity(it);
             }
         });
@@ -120,6 +136,59 @@ public class Report_Page extends AppCompatActivity
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.mapFrag);
         mapFragment.getMapAsync(this);
+
+        // capture button
+        Button button_capture = findViewById(R.id.button_capture);
+        button_capture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                GoogleMap.SnapshotReadyCallback callback = new GoogleMap.SnapshotReadyCallback() {
+                    @Override
+                    public void onSnapshotReady(Bitmap snapshot) {
+                        String fileName = getString(R.string.app_name) + System.currentTimeMillis() + ".jpeg";
+                        File file = saveImageIntoFileFromUri(getApplicationContext(), snapshot, fileName, getExternalFilePath(getApplicationContext()));
+                    }
+                };
+                mMap.snapshot(callback);
+            }
+        });
+
+    }
+
+    public static String getExternalFilePath(Context context) {
+        String filePath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) +"/";
+        return filePath;
+    }
+
+    public File saveImageIntoFileFromUri(Context context, Bitmap bitmap, String fileName, String path) {
+        File file = new File(path, fileName);
+        try {
+            FileOutputStream fileOutputStream = new FileOutputStream(file);
+            switch(file.getAbsolutePath().substring(file.getAbsolutePath().lastIndexOf(".") + 1)){
+                case "jpeg":
+                case "jpg":
+                    bitmap.compress(Bitmap.CompressFormat.JPEG, 50, fileOutputStream);
+                    break;
+                case "png":
+                    bitmap.compress(Bitmap.CompressFormat.PNG, 50, fileOutputStream);
+                    break;
+            }
+            fileOutputStream.flush();
+            fileOutputStream.close();
+
+//            MediaStore.Images.Media.insertImage(this.getContentResolver(), bitmap, fileName);
+
+            Toast.makeText(getApplicationContext(), "파일 저장 성공", Toast.LENGTH_SHORT).show();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            Log.e("Utils","saveImageIntoFileFromUri FileNotFoundException : "+ e.toString());
+            Toast.makeText(getApplicationContext(), "파일 저장 실패", Toast.LENGTH_SHORT).show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            Log.e("Utils","saveImageIntoFileFromUri IOException : "+ e.toString());
+            Toast.makeText(getApplicationContext(), "파일 저장 실패", Toast.LENGTH_SHORT).show();
+        }
+        return file;
     }
 
     @Override
