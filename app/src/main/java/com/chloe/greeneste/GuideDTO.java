@@ -1,13 +1,15 @@
 package com.chloe.greeneste;
 
-public class GuideDTO {
+import java.io.Serializable;
+
+public class GuideDTO implements Serializable {
 
 
 
     private String title;
     private String content;
     private String img;
-
+    public String key;
     public GuideDTO(){}
 
     public GuideDTO(String title, String content, String img){
@@ -43,5 +45,12 @@ public class GuideDTO {
 
     public String toString(){
         return getTitle() + ": " + getContent();
+    }
+
+    public String getThumbContent() {
+        if (this.content.length() <= 20){
+            return this.content;
+        }
+        return this.content.substring(0,20);
     }
 }
