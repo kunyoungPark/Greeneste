@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="Hello ChloeCho!"
+        android:text="Hello, !"
         android:textStyle="bold"
         android:textColor="@color/purple_500"
         android:textSize="25dp"/>
@@ -24,7 +24,7 @@
         android:layout_width="94dp"
         android:layout_height="94dp"
         android:layout_margin="13dp"
-        app:srcCompat="@drawable/screen_shot_2021_11_26_at_5_00_05_pm"
+        app:srcCompat="@drawable/greeneste"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="158dp"
         tools:layout_editor_absoluteY="16dp" />

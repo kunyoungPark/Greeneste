@@ -32,10 +32,13 @@ import com.google.firebase.storage.StorageReference;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
+
 public class HomePage extends AppCompatActivity {
-    FirebaseAuth mAuth;
-    FirebaseUser mUser;
-    MyUser myUser;
+    public FirebaseAuth mAuth;
+    public FirebaseUser mUser;
+    public String username;
+
     @Override
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,9 +48,35 @@ public class HomePage extends AppCompatActivity {
         ImageButton qr_code = findViewById(R.id.imageView16);
         ImageButton report = findViewById(R.id.imageView17);
         ImageButton recycling_guide = findViewById(R.id.imageView19);
+        TextView tv = findViewById(R.id.home_display);
 
-        init();
-        Log.e(">>>>>>>>>>>>>>>>>>", myUser.uid);
+        mAuth = FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
+
+        if (mUser == null){
+            Intent it = new Intent(HomePage.this, LogIn.class);
+            startActivity(it);
+            finish();
+        }
+        FirebaseDatabase database = FirebaseDatabase.getInstance("https://greeneste-92f66-default-rtdb.asia-southeast1.firebasedatabase.app" );
+        DatabaseReference myRef = database.getReference("user/");
+
+        myRef.child(mUser.getUid()).child("username").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    Log.e(">>>>>>>>>>>>>>>>>>", String.valueOf(snapshot));
+                    username = snapshot.getValue(String.class);
+                Log.w(">>>>>>>>>>>>>>>>>>",username);
+                tv.setText("Hello, "+ username + "!");
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.e(">>>>>>>>>>>>>>>>>>", mUser.getUid());
+
+            }
+        });
+
+
        trash_can_location.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
@@ -78,34 +107,5 @@ public class HomePage extends AppCompatActivity {
         });
     }
 
-    public void init(){
 
-        mAuth = FirebaseAuth.getInstance();
-        mUser = mAuth.getCurrentUser();
-        if (mUser == null){
-            Intent it = new Intent(HomePage.this, LogIn.class);
-            startActivity(it);
-            finish();
-        }
-        FirebaseDatabase database = FirebaseDatabase.getInstance("https://greeneste-92f66-default-rtdb.asia-southeast1.firebasedatabase.app" );
-        DatabaseReference myRef = database.getReference();
-        myRef.child(mUser.getUid()).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                for (DataSnapshot user: dataSnapshot.getChildren()){
-                   myUser= user.getValue(MyUser.class);
-                    TextView tv = findViewById(R.id.home_display);
-                    tv.setText("Hello, ");
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Log.w(TAG, "Failed to read value.", error.toException());
-            }
-        });
-    }
 }
