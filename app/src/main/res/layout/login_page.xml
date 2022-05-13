@@ -1,121 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
-
-<LinearLayout
+    android:fillViewport="true"
     android:orientation="vertical"
-    android:gravity="center_horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/green4"
-    tools:context=".LogIn">
+    android:background="#9AF49E"
+    android:gravity="center"
+    android:padding="30dp">
 
 
     <ImageView
         android:id="@+id/login_imageview_logo"
         android:layout_width="195dp"
         android:layout_height="252dp"
-        app:srcCompat="@drawable/greeneste"/>
+        app:srcCompat="@drawable/greeneste" />
 
-    <ImageButton
-        android:id="@+id/signin_google"
+
+
+
+
+
+    <TextView
+        android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/white"
-        app:srcCompat="@drawable/sign_in_page__1" />
+        android:textColor="@color/black"
+        android:text="email" />
 
-    <ImageButton
-        android:id="@+id/signin_fb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/darkblue"
-        app:srcCompat="@drawable/sign_in_page__1__1_" />
-
-    <ImageView
-        android:id="@+id/imageView18"
-        android:layout_width="97dp"
-        android:layout_height="96dp"
-        app:srcCompat="@drawable/or1"
-        tools:layout_editor_absoluteX="157dp"
-        tools:layout_editor_absoluteY="347dp"
-        tools:ignore="MissingConstraints" />
-
-    <LinearLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/myEmail"
+            android:textColorHint="@color/white"
+            android:background="@color/purple_500"
+            android:hint="email here" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:text="Password" />
 
-        <ImageButton
-            android:id="@+id/forgotuser"
-            android:layout_width="131dp"
-            android:layout_height="61dp"
-            android:background="@color/green4"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/forgot_username" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        app:boxStrokeColor="@color/white"
+        app:helperTextTextColor="@color/white"
+        android:layout_height="wrap_content">
 
-        <ImageButton
-            android:id="@+id/forgotpass"
-            android:layout_width="131dp"
-            android:layout_height="61dp"
-            android:background="@color/green4"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/forgot_username__1_"
-            tools:ignore="MissingConstraints,SpeakableTextPresentCheck"
-            tools:layout_editor_absoluteX="212dp"
-            tools:layout_editor_absoluteY="713dp" />
-    </LinearLayout>
-
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_500"
+            android:textColorHighlight="@color/white"
+            android:textColorHint="@color/white"
+            android:id="@+id/myPwd"
+            android:hint="password here" />
+    </com.google.android.material.textfield.TextInputLayout>
     <ImageButton
         android:id="@+id/signin_btn"
+        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/green4"
         app:srcCompat="@drawable/sign_in_page__1__2_" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="------ or ------"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"/>
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Username" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="409dp"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="hint"
-            android:background="@color/green8"
-            tools:ignore="MissingConstraints" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Password" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="570dp"
-        tools:ignore="MissingConstraints">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/green8"
-            android:hint="hint" />
-    </com.google.android.material.textfield.TextInputLayout>
-
+        android:text="join us"
+        android:backgroundTint="@color/green4"
+        android:layout_marginTop="20dp"
+        android:id="@+id/join"/>
 </LinearLayout>
-</ScrollView>
+
 
 

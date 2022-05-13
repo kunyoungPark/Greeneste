@@ -23,7 +23,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDvENbJL4DZ0Kr5jreoUKE0a75KOX9REGw" />
 
-        <activity android:name=".Recycling_Guide"
+        <activity android:name=".Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -31,6 +31,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".HomePage"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Recycling_Guide"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>

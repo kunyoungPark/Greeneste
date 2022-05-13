@@ -16,9 +16,12 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Signup extends AppCompatActivity {
     private FirebaseAuth mAuth;
+    private MyUser myUser;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,35 +35,44 @@ public class Signup extends AppCompatActivity {
         TextInputEditText password_input= findViewById(R.id.password_input);
         ImageButton complete = findViewById(R.id.complete);
 
-        String email = String.valueOf(email_input.getText() );
-        String password = String.valueOf(password_input.getText());
 
         complete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String email = email_input.getText().toString();
+                String password = password_input.getText().toString();
+
+                mAuth =  FirebaseAuth.getInstance();
+                mAuth.createUserWithEmailAndPassword(email, password)
+                        .addOnCompleteListener(Signup.this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    // Sign in success, update UI with the signed-in user's information
+                                    Log.d(" s i", "createUserWithEmail:success");
+                                    FirebaseUser user = mAuth.getCurrentUser();
+                                    MyUser myUser = new MyUser(email, userid_input.getText().toString(), user.getUid(), phone_number_input.getText().toString(), birth_input.getText().toString(),0  );
+                                    saveUser(myUser);
+                                } else {
+                                    // If sign in fails, display a message to the user.
+                                    Log.w("s i ", "createUserWithEmail:failure", task.getException());
+                                    Toast.makeText(Signup.this, "Authentication failed.",
+                                            Toast.LENGTH_SHORT).show();
+                                    //updateUI(null);
+                                }
+                            }
+                        });
             }
         });
 
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d(" s i", "createUserWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            //updateUI(user);
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w("s i ", "createUserWithEmail:failure", task.getException());
-                            Toast.makeText(Signup.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
-                            //updateUI(null);
-                        }
-                    }
-                });
+
     }
 
+    public void saveUser(MyUser user){
+        FirebaseDatabase database = FirebaseDatabase.getInstance("https://greeneste-92f66-default-rtdb.asia-southeast1.firebasedatabase.app" );
+        DatabaseReference myRef = database.getReference();
+        myRef.child("user/"+user.uid).setValue(user);
+    }
 
     @Override
     public void onStart() {

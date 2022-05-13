@@ -6,11 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/green4"
+    android:padding="30dp"
     android:orientation="vertical">
 
 
     <LinearLayout
-        android:layout_width="409dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center">
@@ -28,22 +29,22 @@
             android:text="What do you need help on?"/>
 
         <LinearLayout
-            android:layout_width="409dp"
+            android:layout_width="match_parent"
             android:layout_height="210dp"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/no_trash_can_btn"
-                android:layout_width="210dp"
-                android:layout_height="210dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="@color/green6"
                 android:text="No trash can near" />
 
             <Button
                 android:id="@+id/too_much_trash_btn"
-                android:layout_width="210dp"
-                android:layout_height="210dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="@color/teal_700"
                 android:text="Too much trash" />

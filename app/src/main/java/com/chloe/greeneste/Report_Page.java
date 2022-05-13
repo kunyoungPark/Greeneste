@@ -6,12 +6,15 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.os.Looper;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -97,7 +100,18 @@ public class Report_Page extends AppCompatActivity
         Button too_much_trash = findViewById(R.id.too_much_trash_btn);
         TextView question = findViewById(R.id.question_textview);
 
-
+        ProgressDialog progressDialog ;
+        progressDialog = new ProgressDialog(Report_Page.this);
+        progressDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        progressDialog.setCancelable(false);
+        progressDialog.show();
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                progressDialog.dismiss();
+            }
+        }, 2000); //딜레이 타임 조절
         trash_can.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

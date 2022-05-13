@@ -4,17 +4,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="30dp"
     android:background="@color/green4">
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="match_parent"
+        android:layout_height="101dp"
+        app:srcCompat="@drawable/greeneste" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="50dp"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="Join Us" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/imageView7"
-            android:layout_width="190dp"
-            android:layout_height="68dp"
+            android:layout_width="100dp"
+            android:layout_height="47dp"
+            android:layout_gravity="center"
             android:scaleType="fitXY"
             app:srcCompat="@drawable/name" />
         <com.google.android.material.textfield.TextInputLayout
@@ -25,19 +45,44 @@
                 android:id="@+id/userid_input"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/green8"
+                android:background="@color/sage"
                 android:hint="hint" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="47dp"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/forgot_username__1_" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_input"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/sage"
+                android:hint="hint" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
         android:orientation="horizontal">
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="190dp"
-        android:layout_height="68dp"
+        android:layout_width="100dp"
+        android:layout_height="47dp"
+        android:layout_gravity="center"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/name__1_" />
     <com.google.android.material.textfield.TextInputLayout
@@ -48,21 +93,25 @@
             android:id="@+id/name_input"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/green8"
+            android:background="@color/sage"
+
             android:hint="hint" />
     </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
         android:orientation="horizontal">
         <ImageView
             android:id="@+id/imageView10"
-            android:layout_width="190dp"
-            android:layout_height="68dp"
+            android:layout_width="100dp"
+            android:layout_height="47dp"
+            android:layout_gravity="center"
             android:scaleType="fitXY"
             app:srcCompat="@drawable/name__2_" />
+
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -71,19 +120,21 @@
                 android:id="@+id/birth_input"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/green8"
+                android:background="@color/sage"
                 android:hint="hint" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
         android:orientation="horizontal">
         <ImageView
             android:id="@+id/imageView11"
-            android:layout_width="190dp"
-            android:layout_height="68dp"
+            android:layout_width="100dp"
+            android:layout_height="47dp"
+            android:layout_gravity="center"
             android:scaleType="fitXY"
             app:srcCompat="@drawable/name__3_" />
         <com.google.android.material.textfield.TextInputLayout
@@ -94,19 +145,22 @@
                 android:id="@+id/phone_number_input"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/green8"
+                android:background="@color/sage"
                 android:hint="hint" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+
         android:orientation="horizontal">
         <ImageView
             android:id="@+id/imageView12"
-            android:layout_width="190dp"
-            android:layout_height="68dp"
+            android:layout_width="100dp"
+            android:layout_height="47dp"
+            android:layout_gravity="center"
             app:srcCompat="@drawable/name__4_"
             android:scaleType="fitXY"/>
         <com.google.android.material.textfield.TextInputLayout
@@ -117,57 +171,20 @@
                 android:id="@+id/email_input"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/green8"
+                android:background="@color/sage"
                 android:hint="hint" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
 
-        android:gravity="center">
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/password_input"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/green8"
-                android:hint="hint" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-
+        android:layout_marginTop="30dp"
         android:gravity="center">
-        <ImageView
-            android:id="@+id/imageView13"
-            android:layout_width="190dp"
-            android:layout_height="68dp"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/agreement_of_utilization" />
-        <CheckBox
-            android:id="@+id/imageView14"
-            android:layout_width="wrap_content"
-            android:layout_height="68dp"
-            android:background="@color/green8"
-            app:srcCompat="@drawable/check_mark_box__" />
 
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-
-        android:gravity="center">
         <ImageButton
             android:id="@+id/complete"
             android:layout_width="190dp"
@@ -175,8 +192,19 @@
             android:scaleType="fitXY"
             android:background="@color/green4"
             app:srcCompat="@drawable/name__5_" />
+
     </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="147dp"
+        app:srcCompat="@drawable/img_1069" />
 
 
 </LinearLayout>

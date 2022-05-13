@@ -1,6 +1,10 @@
 package com.chloe.greeneste;
 
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.webkit.WebResourceRequest;
@@ -59,7 +63,24 @@ public class AfterReport_Page extends AppCompatActivity {
                 Map<String, Object> updates = new HashMap<>();
                 updates.put("user/"+userId+"/point", ServerValue.increment(1));
                 myRef.updateChildren(updates);
-                Toast.makeText(getApplicationContext(), "point +1", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "point +1", Toast.LENGTH_LONG).show();
+                ProgressDialog progressDialog ;
+                progressDialog = new ProgressDialog(AfterReport_Page.this);
+                progressDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                progressDialog.setCancelable(false);
+                progressDialog.show();
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        progressDialog.dismiss();
+                        Intent it = new Intent(getApplicationContext(), HomePage.class);
+
+                        startActivity(it);
+                        finish();
+                    }
+                }, 1000); //딜레이 타임 조절
+
             }
         });
     }
